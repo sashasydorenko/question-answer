@@ -1,0 +1,22 @@
+doctype html
+html ng-app="app"
+  head
+    title ng-bind="title" Questions
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="keywords" content=""
+    meta name="description" content=""
+
+    = stylesheet_link_tag 'application', :media => 'all'
+    = csrf_meta_tags
+
+  body
+    nav.navbar.navbar-default role="navigation"
+      a.navbar-brand href="/" Question & Answer
+
+    .container ui-view=""
+
+    = javascript_include_tag 'application'
+
+    .footer: .container: p.text-muted Question & Answer application on the AngularJS and Ruby on Rails

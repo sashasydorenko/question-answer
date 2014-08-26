@@ -1,0 +1,7 @@
+h1 Welcome to Question & Answer!
+p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta id quae voluptas praesentium laudantium dolore, voluptate sit eius deserunt similique dolorum fuga ipsam officia eum, sapiente hic, provident inventore debitis!
+
+h3 Choose questions category
+
+.list-group ng-controller="CategoriesCtrl"
+  a.list-group-item ui-sref="categories.questions({ category_id: category.id })" ng-repeat="category in categories" {{category.name}}

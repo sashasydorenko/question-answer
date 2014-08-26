@@ -1,0 +1,22 @@
+default: &defaults
+  user: root
+  password: pass
+  adapter: postgresql
+  host: localhost
+  min_messages: WARNING
+
+development:
+  <<: *defaults
+  database: questions_development
+
+test:
+  <<: *defaults
+  database: questions_test
+
+production:
+  <<: *defaults
+  database: questions_production
+
+staging:
+  <<: *defaults
+  database: questions_staging

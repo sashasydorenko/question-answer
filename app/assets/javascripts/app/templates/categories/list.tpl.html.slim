@@ -1,0 +1,9 @@
+ul.nav.nav-tabs role="tablist"
+  li ng-repeat="category in categories" ng-class="{active: activeCategory(category.id)}"
+    a ui-sref="categories.questions({ category_id: category.id })"
+      span {{category.name}} 
+      span.label.label-info {{category.count}}
+
+br
+
+div ui-view=""

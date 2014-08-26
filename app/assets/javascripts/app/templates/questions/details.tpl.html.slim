@@ -1,0 +1,32 @@
+.modal.modal-question tabindex="-1" role="dialog"
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header ng-hide="questionLoader"
+        button type="button" class="close" ng-click="$hide()" &times;
+        h4 class="modal-title" {{question.title}}
+
+      div class="modal-body"
+        spinner show="questionLoader"
+
+        div ng-hide="questionLoader"
+          p.question-body {{question.body}}
+          
+          .comments ng-hide="question.status=='close'||question.status=='ballot'"
+            hr
+
+            h5 {{question.comments}} Comments:
+
+            spinner show="commentsLoader"
+          
+            / Comments list
+            ul class="media-list"
+              li class="media" ng-repeat="comment in comments"
+                a.pull-left href="#"
+                  img.media-object alt="cat" ng-src="http://lorempixel.com/g/100/100/cats/{{$index+1}}" style="width: 64px; height: 64px;"
+
+                .media-body: p {{comment.body}}
+
+            / Create comment
+            form.add-comment name="commentForm" novalidate="" ng-submit="submitComment()" ng-hide="commentsLoader"
+              button.btn.btn-primary.pull-right type="submit" ng-disabled="!commentForm.$valid" Send
+              div: input.form-control type="text" placeholder="Type comment..." name="comment" ng-model="comment" required=""

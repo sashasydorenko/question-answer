@@ -1,0 +1,14 @@
+.panel.panel-default ng-repeat="question in questions"
+  .panel-heading
+    .row
+      .col-sm-10: h1.panel-title {{question.title}}
+      .col-sm-2: select.form-control.input-sm ng-model="question.status" ng-change="changeStatus(question)" ng-disabled="question.status=='close'"
+        option value="open" Open
+        option value="ballot" Ballot
+        option value="close" Close
+
+  .panel-body
+    p.question-body {{question.body}}
+    a.btn.btn-primary.btn-sm ui-sref="categories.questions.details({ question_id: question.id })" {{question.comments}} Comments
+
+div ui-view=""

@@ -1,0 +1,86 @@
+$modal-lg: 940px;
+$modal-md: 700px;
+
+$footer-height: 60px;
+
+@import "compass";
+@import "bootstrap";
+@import "strap";
+
+:focus {
+  outline: none !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: $footer-height;
+}
+
+hr {
+  margin: 14px 0;
+}
+
+[ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+// sticky footer
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  background-color: #f5f5f5;
+  border-top: 1px solid #eee;
+
+  p {
+    display: table-cell;
+    height: $footer-height;
+    vertical-align: middle;
+  }
+}
+
+// tabs
+.nav-tabs {
+  height: 42px;
+}
+
+// question list item
+.panel-heading .row {
+  .panel-title {
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.question-body { font-size: 16px; }
+
+.media-list { margin-bottom: 14px; }
+
+.add-comment {
+  > div {
+    overflow: hidden;
+    display: block;
+  }
+
+  .btn { margin-left: 14px; }
+}
+
+.modal-question {
+  p { margin: 0; }
+  .spinner { margin: 20px 0; }
+  .comments { margin-top: 10px; }
+}
+
+// Preloader (spinner)
+.spinner {
+  background: image-url('spinner.gif') 50% 50% no-repeat;
+  display: inline-block;
+  @include square(30px);
+  @include background-size(100% 100%);
+}
