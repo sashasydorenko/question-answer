@@ -2,11 +2,11 @@ RorAngularQuestions::Application.routes.draw do
   namespace :api do
     resources :categories do
       resources :questions do
-        resources :comments
-
         member do
           put :status
         end
+
+        resources :comments
       end
     end
   end
