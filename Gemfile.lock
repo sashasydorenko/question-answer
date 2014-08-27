@@ -69,6 +69,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.1.1)
       railties (>= 3.1.0)
+    json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -122,6 +123,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.41)
+    uglifier (2.5.3)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
 
 PLATFORMS
   ruby
@@ -140,3 +144,4 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   slim!
   slim-rails (= 2.1.0)
+  uglifier (~> 2.5.3)

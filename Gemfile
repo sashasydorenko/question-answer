@@ -16,6 +16,7 @@ gem 'angularjs-rails', '1.2.14'
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails', '~> 1.1.3'
 gem 'bootstrap-sass', '~> 3.2.0.0'
+gem 'uglifier', '~> 2.5.3'
 
 # Icons FontAwesome
 gem 'font-awesome-rails', '~> 4.1.0.0'

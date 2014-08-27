@@ -20,7 +20,8 @@ angular.module('mgcrea.ngStrap.modal', ['mgcrea.ngStrap.helpers.dimensions'])
       show: true
     };
 
-    this.$get = function($window, $rootScope, $compile, $q, $templateCache, $http, $animate, $timeout, $sce, dimensions) {
+    this.$get = ['$window', '$rootScope', '$compile', '$q', '$templateCache', '$http', '$animate', '$timeout', '$sce', 'dimensions',
+        function($window, $rootScope, $compile, $q, $templateCache, $http, $animate, $timeout, $sce, dimensions) {
 
       var forEach = angular.forEach;
       var trim = String.prototype.trim;
@@ -244,11 +245,11 @@ angular.module('mgcrea.ngStrap.modal', ['mgcrea.ngStrap.helpers.dimensions'])
 
       return ModalFactory;
 
-    };
+    }];
 
   })
 
-  .directive('bsModal', function($window, $location, $sce, $modal) {
+  .directive('bsModal', ['$window', '$location', '$sce', '$modal', function($window, $location, $sce, $modal) {
 
     return {
       restrict: 'EAC',
@@ -293,4 +294,4 @@ angular.module('mgcrea.ngStrap.modal', ['mgcrea.ngStrap.helpers.dimensions'])
       }
     };
 
-  });
+  }]);
