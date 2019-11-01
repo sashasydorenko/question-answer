@@ -1,7 +1,7 @@
 Question &amp; Answer
 ===============
 
-"Question &amp; Answer" with Ruby on Rails 4, AngularJS, PostgreSQL
+"Question &amp; Answer" with Ruby on Rails 4, AngularJS, PostgreSQL.
 
 For populate the database run next two rake tasks:
 ```
